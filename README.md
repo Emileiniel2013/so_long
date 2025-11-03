@@ -49,6 +49,7 @@ make
 | **ESC**           | Quit the game              |
 
 Each key press updates the player's position, removes collected items, and redraws the entire map — simulating smooth movement.
+
 ⚠️ Note: The key handling was implemented for macOS using MiniLibX’s key codes.
 On Linux systems, some key mappings may need adjustment in the input handler.
 
