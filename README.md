@@ -42,17 +42,20 @@ make
 ./so_long maps/example.ber
 ```
 3. Controls
+
 | Key               | Action                     |
 | ----------------- | -------------------------- |
 | **W / A / S / D** | Move up, left, down, right |
 | **ESC**           | Quit the game              |
 
 Each key press updates the player's position, removes collected items, and redraws the entire map — simulating smooth movement.
+
 ---
 🎨 Customization
 
 You can use your own textures and sprites by replacing the .xpm files in the textures/ directory.
 Make sure to preserve the same file names or update the map configuration to match your new assets.
+
 ---
 🧠 Technical Details
 
