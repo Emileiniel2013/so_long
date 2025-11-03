@@ -1,4 +1,65 @@
-A small, fun game project, used as an introduction into the world of game development. The program takes as and argument the map file that needs to be located in the Maps folder and has to have the .ber format. The program draws the map dinamically, and the objective of the game is for the monster to eat all the cake pieces on the map and then escape trough the portal. The project has a very good map checking function that checks the validity of the map and prints custom error messages depending of the missing characteristic of the map. Basically everytime a key is pressed the position of the player on the map is changed, and the colectible is being removed(if there is one), then the map is being rebuilt all over again, giving us the cool impresion of movement. As always run the make command for the compilation of the program. Enjoy! :)
+# so_long
 
+**so_long** is a small 2D game written in **C** using the **MiniLibX** graphics library.  
+It serves as an introduction to fundamental game development concepts such as rendering, event handling, and map parsing.
 
-Subject : https://cdn.intra.42.fr/pdf/pdf/106591/en.subject.pdf
+The game reads a `.ber` map file and dynamically draws it to the screen.  
+Your goal: collect all the cakes 🍰 and reach the exit portal — while avoiding obstacles along the way.
+
+---
+
+## 🎮 Features
+- Dynamic 2D rendering with MiniLibX  
+- Player movement and collision detection  
+- Collectibles and exit portal logic  
+- Custom map validation with detailed error handling  
+- Real-time keyboard input and map updates per frame  
+- Lightweight, single-threaded rendering loop  
+
+---
+
+## 🗺 Map Format
+
+- Map files must be placed inside the `maps/` directory  
+- File extension must be `.ber`  
+- Must include:
+  - Exactly one player start position  
+  - At least one collectible and one exit  
+  - Walls enclosing the entire map  
+
+If any rule is broken, the program prints a **specific custom error message**.
+
+---
+
+## ⚙️ How to Run
+
+### 1. Build the project
+```bash
+make
+```
+2. Run the game
+```bash
+./so_long maps/example.ber
+```
+3. Controls
+| Key               | Action                     |
+| ----------------- | -------------------------- |
+| **W / A / S / D** | Move up, left, down, right |
+| **ESC**           | Quit the game              |
+
+Each key press updates the player's position, removes collected items, and redraws the entire map — simulating smooth movement.
+---
+🎨 Customization
+
+You can use your own textures and sprites by replacing the .xpm files in the textures/ directory.
+Make sure to preserve the same file names or update the map configuration to match your new assets.
+---
+🧠 Technical Details
+
+-Written in C (C99)
+
+-Built with MiniLibX for rendering and input handling
+
+-Single render loop architecture
+
+-Error-safe map parsing and memory management
